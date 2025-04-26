@@ -26,6 +26,7 @@ app.get('/test-async', async (req, res) => {
 app.get('/test-sync', (req, res) => {
   const start = Date.now()
   const results = []
+  
   for (let i = 0; i < totalText; i++) {
     const result = bcrypt.hashSync('password123', salt) // ใช้แบบ Sync ที่ต้องรอรันจนเสร็จก่อนที่จะรันต่อ
     results.push(result)
